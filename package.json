@@ -1,0 +1,39 @@
+{
+  "name": "node-red-contrib-slackbot",
+  "version": "0.0.0",
+  "description": "NodeRED node to easily create a chatbot in Slack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "predev": "npm i -g",
+    "dev": "node-red -v"
+  },
+  "author": "Stephen Keep",
+  "contributors": [
+    {
+      "name": "Stephen Keep",
+      "email": "Stephen.Keep@redant.com"
+    }
+  ],
+  "keywords": [
+    "node-red",
+    "contrib-slackbot",
+    "slack",
+    "redconnect"
+  ],
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/redconnect-io/node-red-contrib-slackbot"
+  },
+  "node-red": {
+    "nodes": {
+      "slackbot-controller": "slackbot-controller.js",
+      "slackbot-listen": "slackbot-listen.js",
+      "slackbot-reply": "slackbot-reply.js"
+    }
+  },
+  "dependencies": {
+    "botkit": "0.0.5"
+  }
+}
