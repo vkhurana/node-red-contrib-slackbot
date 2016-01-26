@@ -22,4 +22,5 @@ Enter a name for your bot. Make it something fun and friendly, but avoid a singl
 
 ## Implemented Node
 
- * Send Email - [https://mandrillapp.com/api/docs/](https://mandrillapp.com/api/docs/)
+ * Slack Listen
+ * Slack Reply
