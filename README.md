@@ -1,6 +1,6 @@
 # Slack Bot for NodeRED
 
-[![RedConnect Approved](https://img.shields.io/badge/RedConnect-Approved-brightgreen.svg?style=flat)](https://www.redconnect.io/addons) [![Gitter](https://img.shields.io/gitter/room/badges/shields.svg)](https://gitter.im/redconnect-io/redconnect)
+[![RedConnect Approved](https://img.shields.io/badge/RedConnect-Approved-brightgreen.svg?style=flat)](https://www.redconnect.io/addons)
 
 Simple nodes that interact with the Slack Bot API [Bot Users](https://api.slack.com/bot-users) service.
 
