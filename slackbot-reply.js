@@ -18,7 +18,8 @@ module.exports = function(RED) {
             });
 
             node.bot = this.controller.spawn({
-                token: slackbot.bot_token
+                token: slackbot.bot_token,
+                retry: slackbot.bot_retries,
             }).startRTM();
             
         }
