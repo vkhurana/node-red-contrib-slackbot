@@ -10,6 +10,16 @@ module.exports = function(RED) {
         var node = this;
         
         var slackbot = RED.nodes.getNode(n.slackbot);
+
+        function start_rtm() {
+            node.bot.startRTM(function(err,bot,payload) {
+                if (err) {
+                        console.log('Failed to start RTM')
+                        return setTimeout(start_rtm, 60000);
+                }
+                console.log("RTM started!");
+            });
+        }
         
         if (slackbot.bot_token) {
             
@@ -19,10 +29,14 @@ module.exports = function(RED) {
 
             node.bot = this.controller.spawn({
                 token: slackbot.bot_token,
-                retry: slackbot.bot_retries,
-            }).startRTM();
+            });
             
+            start_rtm();
         }
+
+        node.controller.on('rtm_close', function(bot, err) {
+            start_rtm();
+        });
 
         node.controller.on('direct_message,direct_mention,mention',function(bot, message) {
             
