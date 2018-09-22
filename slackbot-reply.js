@@ -14,10 +14,8 @@ module.exports = function(RED) {
         function start_rtm() {
             node.bot.startRTM(function(err,bot,payload) {
                 if (err) {
-                        console.log('Failed to start RTM')
-                        return setTimeout(start_rtm, 60000);
+                    setTimeout(start_rtm, 5000);
                 }
-                console.log("RTM started!");
             });
         }
         
